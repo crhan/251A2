@@ -7,8 +7,3 @@
 
 #include "town.h"
 
-town::town() {
-	// TODO Auto-generated constructor stub
-
-}
-

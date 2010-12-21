@@ -17,7 +17,7 @@ class town {
 private:
 	int static townNum;
 	string name;
-//	vector<bus> aBus;
+	vector<bus> aBus;
 
 
 public:
