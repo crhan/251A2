@@ -5,13 +5,13 @@
  *      Author: crhan
  */
 
-#include "Map.h"
+#include "map.h"
 
-Map::Map() {
+map::map() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Map::~Map() {
+map::~map() {
 	// TODO Auto-generated destructor stub
 }

@@ -1,17 +1,14 @@
 /*
- * Bus.cpp
+ * Town.cpp
  *
  *  Created on: Dec 21, 2010
  *      Author: crhan
  */
 
-#include "Bus.h"
+#include "town.h"
 
-Bus::Bus() {
+town::town() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Bus::~Bus() {
-	// TODO Auto-generated destructor stub
-}

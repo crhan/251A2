@@ -8,10 +8,10 @@
 #ifndef DIJKSTRA_H_
 #define DIJKSTRA_H_
 
-class Dijkstra {
+class dijkstra {
 public:
-	Dijkstra();
-	virtual ~Dijkstra();
+	dijkstra();
+	virtual ~dijkstra();
 };
 
 #endif /* DIJKSTRA_H_ */
