@@ -7,18 +7,8 @@
 
 #include "bus.h"
 
-int bus::print(int printNum)
+int bus::detail()
 {
-	switch(printNum){
-	case 1:
-		cout<<getDepTown();
-	case 2:
-		cout<<getDesTown();
-	case 3:
-		cout<<getDepTime();
-	case 4:
-		cout<<getDesTime();
-	}
-
+	cout<<desTown<<", "<<depTime<<", "<<desTime<<endl;
 	return 0;
 }

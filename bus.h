@@ -10,27 +10,25 @@
 
 #include<string>
 #include<iostream>
-#include"town.h"
 using namespace std;
 
 class bus {
+private:
+	int desTown;
+	string depTime;
+	string desTime;
 public:
-	bus(int a, int b, string c, string d){
-		depTown = a;
-		desTown = b;
-		depTime = c;
-		desTime = d;
+	bus(int a, string b, string c){
+		desTown = a;
+		depTime = b;
+		desTime = c;
 	}
-	int print(int printNum);
 
+	int detail();
 
     string getDepTime() const
     {
         return depTime;
-    }
-    int getDepTown() const
-    {
-        return depTown;
     }
     string getDesTime() const
     {
@@ -44,10 +42,6 @@ public:
     {
         this->depTime = depTime;
     }
-    void setDepTown(int depTown)
-    {
-        this->depTown = depTown;
-    }
     void setDesTime(string desTime)
     {
         this->desTime = desTime;
@@ -57,11 +51,6 @@ public:
         this->desTown = desTown;
     }
 
-private:
-	int depTown;
-	int desTown;
-	string depTime;
-	string desTime;
 };
 
 #endif /* BUS_H_ */
