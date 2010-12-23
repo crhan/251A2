@@ -9,11 +9,9 @@
 
 town::town(string a):name(a),aBus(){}
 
-
-
-vector<bus> town::getBus()
+vector<bus>::iterator town::getBus(vector<bus>::difference_type index)
 {
-	return aBus;
+	return aBus.begin()+index;
 }
 
 int town::addBus(int a, string b, string c)

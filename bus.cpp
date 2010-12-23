@@ -7,7 +7,7 @@
 
 #include "bus.h"
 
-int bus::detail()
+int bus::printBus()
 {
 	cout<<desTown<<", "<<depTime<<", "<<desTime<<endl;
 	return 0;

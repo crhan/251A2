@@ -14,6 +14,7 @@ using namespace std;
 int print_menu();
 int readInFile(string fileName, map &bMap);
 int select();
+int pDirectBus(map &a);
 
 int main(){
 	// read in from file
@@ -21,17 +22,18 @@ int main(){
 	readInFile("input1.txt", aMap);
 
 	//print the menu
+	print_menu();
 	while (true){
-		print_menu();
 		switch (select()){
-		case 1:
-		case 2:
+		case 1: print_menu();
+		case 2: pDirectBus(aMap); break;
 		case 3:
 		case 4:
 		case 5:
 		case 0:
 		default:;
 		}
+		cout<<"\nPlease choose an option (Enter 1 for menu):\n";
 	}
 
 	cout<<"haha";
@@ -75,14 +77,14 @@ int readInFile(string fileName, map &bMap){
 }
 
 int print_menu(){
-	cout<<"Welcome to Bus Journey Planner\n\
-			1) Show main menu\n\
-			2) Print direct buses\n\
-			3) Print next direct bus\n\
-			4) Print earliest arrival time\n\
-			5) Print quickest route\n\
-			0) Exit\n\n\
-			Please choose an option:";
+	cout<<"\nWelcome to Bus Journey Planner\n"
+			"1) Show main menu\n"
+			"2) Print direct buses\n"
+			"3) Print next direct bus\n"
+			"4) Print earliest arrival time\n"
+			"5) Print quickest route\n"
+			"0) Exit\n\n"
+			"Please choose an option:\n";
 
 	return 0;
 }
@@ -102,4 +104,12 @@ int select(){
 			return a;
 		}
 	}
+}
+
+int pDirectBus(map &a){
+	cout<<"Please enter a town number (0.."<<(a.getTown()->size()-1)<<"):\n";
+	int townIndex=select();
+	a.print_DBus(townIndex);
+
+	return 0;
 }
