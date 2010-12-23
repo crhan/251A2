@@ -16,6 +16,7 @@ int readInFile(string fileName, map &bMap);
 int select();
 int pDirectBus(map &a_map);
 int pNextDB(map &a_map);
+string cinTime();
 
 int main(){
 	// read in from file
@@ -124,7 +125,7 @@ int pNextDB(map &a_map){
 
 	//Collecting informations
 	cout<<"Please enter the start time:\n";
-	cin>>depT;
+	depT = cinTime();
 	cout<<"Please enter the departure town number (0.."
 			<<townSize<<"):\n";
 	a=select();
@@ -134,4 +135,13 @@ int pNextDB(map &a_map){
 	a_map.print_NBus(depT,a,b);
 
 	return 0;
+}
+
+string cinTime(){
+	string a;
+	cin>>a;
+	if(a.size()==3){
+		a = "0" + a;
+	}
+	return a;
 }
