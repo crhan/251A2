@@ -24,7 +24,7 @@ public:
 		desTime = c;
 	}
 
-	int detail();
+	int printBus();
 
     string getDepTime() const
     {

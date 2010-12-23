@@ -10,6 +10,7 @@
 
 #include<string>
 #include<vector>
+#include<iostream>
 #include"town.h"
 using namespace std;
 
@@ -18,10 +19,11 @@ class map {
 public:
 	map();
 	int print_townName(int index);
-	int print_DBus(int index);
+	int print_DBus(int townIndex);
 	int print_NBus(string depTime, string desTime, int desIndex);
 
 	vector<town>::iterator getTown(vector<town>::difference_type index){return aTown.begin()+index;}
+	vector<town> *getTown();
 	int newTown(string townName);
 private:
 	vector<town> aTown;
