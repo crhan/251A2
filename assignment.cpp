@@ -117,7 +117,8 @@ int pDirectBus(map &a_map){
 
 
 int pNextDB(map &a_map){
-	string depT,townSize;
+	string depT;
+	vector<bus>::difference_type townSize;
 	int a, b;
 	townSize = a_map.getTown()->size()-1;
 
