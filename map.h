@@ -21,7 +21,7 @@ public:
 	int print_DBus(int index);
 	int print_NBus(string depTime, string desTime, int desIndex);
 
-	town getTown(int index){return aTown[index];}
+	vector<town>::iterator getTown(vector<town>::difference_type index){return aTown.begin()+index;}
 	int newTown(string townName);
 private:
 	vector<town> aTown;
