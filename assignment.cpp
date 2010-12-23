@@ -32,7 +32,7 @@ int main(){
 		case 3: pNextDB(aMap); break;
 		case 4:
 		case 5:
-		case 0:
+		case 0: return 0;
 		default: cout<<"Not implementen\n";
 		}
 		cout<<"\nPlease choose an option (Enter 1 for menu):\n";
