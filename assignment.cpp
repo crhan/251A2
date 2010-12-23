@@ -37,8 +37,6 @@ int main(){
 		}
 		cout<<"\nPlease choose an option (Enter 1 for menu):\n";
 	}
-
-	cout<<"haha";
 	return 0;
 }
 
