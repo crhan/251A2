@@ -123,7 +123,7 @@ int pNextDB(map &a_map){
 
 	//Collecting informations
 	cout<<"Please enter the start time:\n";
-	cin<<depT;
+	cin>>depT;
 	cout<<"Please enter the departure town number (0.."
 			<<townSize<<"):\n";
 	a=select();
