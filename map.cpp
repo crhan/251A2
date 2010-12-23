@@ -11,10 +11,16 @@ map::map(){}
 
 int map::print_DBus(int townIndex)
 {
-	for (vector<bus>::iterator i=aTown[townIndex].getBus()->begin();
-			i != aTown[townIndex].getBus()->end(); ++i){
+	vector<bus> *tmp = aTown[townIndex].getBus();
+	if (tmp->begin() == tmp->end()){
+		cout<<"No buses available\n";
+		return 1;
+	}
+	for (vector<bus>::iterator i=tmp->begin();
+			i !=tmp->end(); ++i){
 		i->printBus();
 	}
+
 	return 0;
 }
 
