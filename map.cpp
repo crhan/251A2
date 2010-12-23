@@ -30,6 +30,25 @@ vector<town> *map::getTown()
 	return ptr_town;
 }
 
+int map::print_NBus(string startT, int depTown, int desTown)
+{
+	vector<bus> *tmp = aTown[depTown].getBus();
+
+	//try to find the bus
+	for ( vector<bus>::iterator i = tmp->begin();
+			i != tmp->end(); ++i){
+		//check if this is the one I need
+		if ( i->getDesTown() == desTown
+				&& i->getDepTime() >= startT){
+			cout<<i->getDesTime()<<endl;
+			return 0;
+		}
+	}
+	//if reaching here, means there is no available buses
+	cout<<"No buses available\n";
+	return 1;
+}
+
 int map::newTown(string townName)
 {
 	town bTown(townName);

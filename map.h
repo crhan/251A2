@@ -20,7 +20,7 @@ public:
 	map();
 	int print_townName(int index);
 	int print_DBus(int townIndex);
-	int print_NBus(string depTime, string desTime, int desIndex);
+	int print_NBus(string startT, int depTown, int desTown);
 
 	vector<town>::iterator getTown(vector<town>::difference_type index){return aTown.begin()+index;}
 	vector<town> *getTown();

@@ -14,7 +14,8 @@ using namespace std;
 int print_menu();
 int readInFile(string fileName, map &bMap);
 int select();
-int pDirectBus(map &a);
+int pDirectBus(map &a_map);
+int pNextDB(map &a_map);
 
 int main(){
 	// read in from file
@@ -106,10 +107,30 @@ int select(){
 	}
 }
 
-int pDirectBus(map &a){
-	cout<<"Please enter a town number (0.."<<(a.getTown()->size()-1)<<"):\n";
+int pDirectBus(map &a_map){
+	cout<<"Please enter a town number (0.."<<(a_map.getTown()->size()-1)<<"):\n";
 	int townIndex=select();
-	a.print_DBus(townIndex);
+	a_map.print_DBus(townIndex);
+
+	return 0;
+}
+
+
+int pNextDB(map &a_map){
+	string depT,townSize;
+	int a, b;
+	townSize = a_map.getTown()->size()-1;
+
+	//Collecting informations
+	cout<<"Please enter the start time:\n";
+	cin<<depT;
+	cout<<"Please enter the departure town number (0.."
+			<<townSize<<"):\n";
+	a=select();
+	cout<<"Please enter the destination town number (0.."
+			<<townSize<<"):\n";
+	b = select();
+	a_map.print_NBus(depT,a,b);
 
 	return 0;
 }
