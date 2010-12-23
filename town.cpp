@@ -7,16 +7,16 @@
 
 #include "town.h"
 
-town::town(string a)
+town::town(string a):name(a){}
+
+
+
+int town::addBus(int a, string b, string c)
 {
-}name(a);
+	bus tmp(a,b,c);
+	aBus.push_back(tmp);
 
-
-
-int town::addBus(istream &in, int a, string b, string c)
-{
-	int
-	aBus.push_back(new bus())
+	return 0;
 }
 
 

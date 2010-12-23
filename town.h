@@ -13,17 +13,16 @@
 #include"bus.h"
 using namespace std;
 
+
 class town {
 private:
-	int static townNum;
 	string name;
 	vector<bus> aBus;
 
-
 public:
-	town();
-	int addBus();
-
+	town(string a);
+	bus getBus(int i);
+	int addBus(int a, string b, string c);
 
 };
 

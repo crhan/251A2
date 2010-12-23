@@ -17,10 +17,11 @@ class map {
 
 public:
 	map();
-	virtual ~map();
 	int print_townName(int index);
 	int print_DBus(int index);
 	int print_NBus(string depTime, string desTime, int desIndex);
+
+	vector<town> getTown(){return aTown;}
 private:
 	vector<town> aTown;
 };
