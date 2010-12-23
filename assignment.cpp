@@ -27,7 +27,7 @@ int main(){
 	print_menu();
 	while (true){
 		switch (select()){
-		case 1: print_menu();
+		case 1: print_menu();break;
 		case 2: pDirectBus(aMap); break;
 		case 3: pNextDB(aMap); break;
 		case 4:
