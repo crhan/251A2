@@ -16,6 +16,7 @@ int readInFile(string fileName, map &bMap);
 int select();
 int pDirectBus(map &a_map);
 int pNextDB(map &a_map);
+int PEAT(map &a_map);
 string cinTime();
 
 int main(){
@@ -30,7 +31,7 @@ int main(){
 		case 1: print_menu();break;
 		case 2: pDirectBus(aMap); break;
 		case 3: pNextDB(aMap); break;
-		case 4:
+		case 4: PEAT(aMap);break;
 		case 5:
 		case 0: return 0;
 		default: cout<<"Not implementen\n";
@@ -144,4 +145,8 @@ string cinTime(){
 		a = "0" + a;
 	}
 	return a;
+}
+
+int PEAT(map &a_map){
+	//TODO implement it
 }
