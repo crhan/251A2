@@ -19,6 +19,7 @@ int main(){
 	map aMap;
 	readInFile("input1.txt", aMap);
 
+	cout<<"haha";
 	return 0;
 }
 
@@ -33,11 +34,12 @@ int readInFile(string fileName, map &bMap){
 	for(int i=0; i<cirTime; ++i){
 		string a;
 		readin>>a;
-		town newTown(a);
-		bMap.getTown().push_back(newTown);
+		bMap.newTown(a);
 	}
 
 	//insert buses into town
+	cirTime=0;
+	readin>>cirTime;
 	for(int i=0;i<cirTime; ++i){
 		int a,b;
 		string c,d;
@@ -51,7 +53,7 @@ int readInFile(string fileName, map &bMap){
 			d="0"+d;
 		}
 
-		bMap.getTown()[a].addBus(b,c,d);
+		bMap.getTown(a).addBus(b,c,d);
 	}
 
 	return 0;

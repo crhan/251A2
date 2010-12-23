@@ -21,7 +21,8 @@ public:
 	int print_DBus(int index);
 	int print_NBus(string depTime, string desTime, int desIndex);
 
-	vector<town> getTown(){return aTown;}
+	town getTown(int index){return aTown[index];}
+	int newTown(string townName);
 private:
 	vector<town> aTown;
 };

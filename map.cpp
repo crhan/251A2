@@ -9,5 +9,15 @@
 
 map::map(){}
 
+int map::newTown(string townName)
+{
+	town bTown(townName);
+	aTown.push_back(bTown);
+
+	return 0;
+}
+
+
+
 
 

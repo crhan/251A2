@@ -7,9 +7,14 @@
 
 #include "town.h"
 
-town::town(string a):name(a){}
+town::town(string a):name(a),aBus(){}
 
 
+
+vector<bus> town::getBus()
+{
+	return aBus;
+}
 
 int town::addBus(int a, string b, string c)
 {

@@ -21,7 +21,7 @@ private:
 
 public:
 	town(string a);
-	bus getBus(int i);
+	vector<bus> getBus();
 	int addBus(int a, string b, string c);
 
 };
