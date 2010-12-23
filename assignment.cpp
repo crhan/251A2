@@ -33,7 +33,7 @@ int main(){
 		case 4:
 		case 5:
 		case 0:
-		default:;
+		default: cout<<"Not implementen\n";
 		}
 		cout<<"\nPlease choose an option (Enter 1 for menu):\n";
 	}
