@@ -6,6 +6,7 @@
  */
 
 #include"map.h"
+#include"dijkstra.h"
 #include<string>
 #include<iostream>
 #include<fstream>
@@ -16,12 +17,13 @@ int readInFile(string fileName, map &bMap);
 int select();
 int pDirectBus(map &a_map);
 int pNextDB(map &a_map);
-int PEAT(map &a_map);
+int PEAT(map &a_map, dijkstra & a_D);
 string cinTime();
 
 int main(){
 	// read in from file
 	map aMap;
+	dijkstra aD;
 	readInFile("input1.txt", aMap);
 
 	//print the menu
@@ -31,7 +33,7 @@ int main(){
 		case 1: print_menu();break;
 		case 2: pDirectBus(aMap); break;
 		case 3: pNextDB(aMap); break;
-		case 4: PEAT(aMap);break;
+		case 4: PEAT(aMap, aD);break;
 		case 5:
 		case 0: return 0;
 		default: cout<<"Not implementen\n";
@@ -145,6 +147,19 @@ string cinTime(){
 	return a;
 }
 
-int PEAT(map &a_map){
-	//TODO implement it
+int PEAT(map &a_map, dijkstra &a_D){
+	string a;
+	int b,c;
+	townSize = a_map.getTown()->size()-1;
+
+	cout<<"Please enter the start time:\n";
+	a = cinTime();
+	cout<<"Please enter the departure town number (0.."
+			<<townSize<<"):\n";
+	b = select();
+	cout<<"Please enter the destination town number (0.."
+			<<townSize<<"):\n";
+	c = select();
+
+	a_D.earlyAT(a_map,a,b,c);
 }
