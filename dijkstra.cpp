@@ -20,16 +20,18 @@ string dijkstra::earlyAT(map & a_map, string startTi, int depTo, int desTo)
 	vector<int>::iterator current = towns.begin();
 
 	//begin to search, and calc the time of arrival
-	for (int index = 0; current != towns.end() && unknown[*current] == true; ++index) {
+	for (int index = 0; current != towns.end() && unknown[*current] == true;) {
 		//redefine "current" to fit the dynamic changes to "towns"
-		current = towns.begin() + index;
+
 
 		//make current town to known and traversal this town
 		unknown[*current] = false;
 		vector<bus> *tmpBus = a_map.getTown(*current)->getBus();
 		for (vector<bus>::iterator i = tmpBus->begin(); i != tmpBus->end(); ++i) {
 			int tmpTown = i->getDesTown();
-			if (unknown[tmpTown] == false) {
+			if (unknown[tmpTown] == false
+					|| arrTi[*current] > i->getDepTime() //如果当前出发时间晚于该汽车发车时间，则通过
+					|| arrTi[tmpTown] < (i -> getDepTime())) { //如果目标镇最早到达时间早于该车到达时间，则通过
 				continue;
 			}
 			towns.push_back(tmpTown);
@@ -37,6 +39,8 @@ string dijkstra::earlyAT(map & a_map, string startTi, int depTo, int desTo)
 				arrTi[tmpTown] = i -> getDesTime();
 			}
 		}
+		++index;
+		current = towns.begin() + index;
 	}
 
 	//try to find the earliest time to the desTo
@@ -44,7 +48,7 @@ string dijkstra::earlyAT(map & a_map, string startTi, int depTo, int desTo)
 		return arrTi[desTo];
 	}
 	else{
-		return " Journey not possible";
+		return "Journey not possible";
 	}
 }
 
