@@ -162,7 +162,7 @@ int PEAT(map &a_map, dijkstra &a_D){
 			<<townSize<<"):\n";
 	c = select();
 
-	a_D.earlyAT(a_map,a,b,c);
+	cout<<a_D.earlyAT(a_map,a,b,c)<<endl;
 
 	return 0;
 }
