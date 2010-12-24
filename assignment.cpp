@@ -72,6 +72,7 @@ int readInFile(string fileName, map &bMap){
 
 		bMap.getTown(a)->addBus(b,c,d);
 	}
+	readin.close();
 
 	return 0;
 }
