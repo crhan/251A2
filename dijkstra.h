@@ -7,11 +7,18 @@
 
 #ifndef DIJKSTRA_H_
 #define DIJKSTRA_H_
+#include<vector>
+#include<string>
+#include"map.h"
+
+using namespace std;
 
 class dijkstra {
 public:
 	dijkstra();
-	virtual ~dijkstra();
+	string earlyAT(map &a_map, string startTi, int depTo, int desTo);
+
+private:
 };
 
 #endif /* DIJKSTRA_H_ */
