@@ -49,6 +49,21 @@ int map::print_NBus(string startT, int depTown, int desTown)
 	return 1;
 }
 
+string map::displayTrace(string aString)
+{
+	cout<<"   From         To      Dep.  Arr.\n";
+	string tmp;
+	for (int i=0; i<aString.size()-1; ++i){
+		int a = (int)aString[i]-48,
+				b = (int)aString[i+1]-48;
+		//TODO 打印bus的出发和到达时间即可
+
+
+		cout<<setw(12)<<aTown[a].getName()<<aTown[b].getName()<<
+				setw(6)<<endl;
+	}
+}
+
 int map::newTown(string townName)
 {
 	town bTown(townName);

@@ -25,6 +25,7 @@ public:
 	vector<bus> *getBus(){ vector<bus> *ptr_bus=&aBus; return ptr_bus;}
 	int addBus(int a, string b, string c);
 
+	string getName(){return name;}
 };
 
 #endif /* TOWN_H_ */
