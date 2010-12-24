@@ -23,7 +23,7 @@ string cinTime();
 int main(){
 	// read in from file
 	map aMap;
-	dijkstra aD;
+	dijkstra aD(aMap);
 	readInFile("input1.txt", aMap);
 
 	//print the menu

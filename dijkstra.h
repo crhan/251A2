@@ -15,10 +15,12 @@ using namespace std;
 
 class dijkstra {
 public:
-	dijkstra();
+	dijkstra(map &a_map);
 	string earlyAT(map &a_map, string startTi, int depTo, int desTo);
+	string QuickR(map &a_map, string startTi, int depTo, int desTo);
 
 private:
+	vector<string> traceBack;
 };
 
 #endif /* DIJKSTRA_H_ */
