@@ -150,6 +150,7 @@ string cinTime(){
 int PEAT(map &a_map, dijkstra &a_D){
 	string a;
 	int b,c;
+	vector<bus>::difference_type townSize;
 	townSize = a_map.getTown()->size()-1;
 
 	cout<<"Please enter the start time:\n";
@@ -162,4 +163,6 @@ int PEAT(map &a_map, dijkstra &a_D){
 	c = select();
 
 	a_D.earlyAT(a_map,a,b,c);
+
+	return 0;
 }
