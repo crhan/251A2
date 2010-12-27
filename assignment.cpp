@@ -188,6 +188,7 @@ int PQR(map &a_map, dijkstra &a_D){
 	int b=3, c=0;
 
 	string trace = (char)(b+48) + a_D.QuickestR(a_map,a,b,c);
+	a_map.displayTrace(trace);
 	cout<<trace<<endl;
 	return 0;
 }
