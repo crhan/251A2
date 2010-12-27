@@ -14,11 +14,11 @@ town::town(string a):name(a),aBus(){}
 //	return aBus.begin()+index;
 //}
 
-vector<bus>::iterator town::getBus(int desTown)
+vector<bus>::iterator town::getBus(int desTown, string time)
 {
 	for (vector<bus>::iterator i=aBus.begin();
 			i != aBus.end(); ++i){
-		if (i->getDesTown() == desTown)
+		if (i->getDesTown() == desTown && i->getDepTime() > time)
 			return i;
 	}
 	return aBus.end();

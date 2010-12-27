@@ -21,7 +21,7 @@ private:
 
 public:
 	town(string a);
-	vector<bus>::iterator getBus(int desTown);
+	vector<bus>::iterator getBus(int desTown, string time);
 	vector<bus> *getBus(){ vector<bus> *ptr_bus=&aBus; return ptr_bus;}
 	int addBus(int a, string b, string c);
 

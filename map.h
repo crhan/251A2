@@ -25,7 +25,7 @@ public:
 
 	vector<town>::iterator getTown(vector<town>::difference_type index){return aTown.begin()+index;}
 	vector<town> *getTown();
-	int displayTrace(string aString);
+	int displayTrace(string trace, string startT);
 	int newTown(string townName);
 private:
 	vector<town> aTown;

@@ -170,25 +170,21 @@ int PEAT(map &a_map, dijkstra &a_D){
 }
 
 int PQR(map &a_map, dijkstra &a_D){
-//	string a;
-//	int b,c;
-//	vector<bus>::difference_type townSize;
-//	townSize = a_map.getTown()->size()-1;
-//
-//	cout<<"Please enter the start time:\n";
-//	a = cinTime();
-//	cout<<"Please enter the departure town number (0.."
-//			<<townSize<<"):\n";
-//	b = select();
-//	cout<<"Please enter the destination town number (0.."
-//			<<townSize<<"):\n";
-//	c = select();
+	string a;
+	int b,c;
+	vector<bus>::difference_type townSize;
+	townSize = a_map.getTown()->size()-1;
 
-	string a ="0000";
-	int b=3, c=0;
+	cout<<"Please enter the start time:\n";
+	a = cinTime();
+	cout<<"Please enter the departure town number (0.."
+			<<townSize<<"):\n";
+	b = select();
+	cout<<"Please enter the destination town number (0.."
+			<<townSize<<"):\n";
+	c = select();
 
 	string trace = (char)(b+48) + a_D.QuickestR(a_map,a,b,c);
-	a_map.displayTrace(trace);
-	cout<<trace<<endl;
+	a_map.displayTrace(trace,a);
 	return 0;
 }

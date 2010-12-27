@@ -44,16 +44,18 @@ int map::print_NBus(string startT, int depTown, int desTown) {
 	return 1;
 }
 
-int map::displayTrace(string aString) {
+int map::displayTrace(string trace, string startT) {
 	cout << setw(12) << "   From         To      Dep.  Arr.\n";
 	string tmp;
-	for (string::size_type i = 0; i < aString.size() - 1; ++i) {
-		int a = (int) aString[i] - 48, b = (int) aString[i + 1] - 48;
+	for (string::size_type i = 0; i < trace.size() - 1; ++i) {
+		int a = (int) trace[i] - 48, b = (int) trace[i + 1] - 48;
 		cout << setw(12) << aTown[a].getName();
 		cout << setw(12) << aTown[b].getName();
-		cout << setw(6) << (aTown[a].getBus(b)->getDepTime());
-		cout << setw(6) << (aTown[a].getBus(b)->getDesTime());
+		cout << setw(6) << (aTown[a].getBus(b,startT)->getDepTime());
+		cout << setw(6) << (aTown[a].getBus(b,startT)->getDesTime());
 		cout << endl;
+		//reset the startT
+		startT = aTown[a].getBus(b,startT)->getDesTime();
 	}
 	return 0;
 }
