@@ -37,7 +37,7 @@ int main(){
 		case 4: PEAT(aMap, aD);break;
 		case 5: PQR(aMap,aD); break;
 		case 0: return 0;
-		default: cout<<"Not implementen\n";
+		default: cout<<"Not implemention\n";
 		}
 		cout<<"\nPlease choose an option (Enter 1 for menu):\n";
 	}
