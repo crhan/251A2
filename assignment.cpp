@@ -185,6 +185,10 @@ int PQR(map &a_map, dijkstra &a_D){
 	c = select();
 
 	string trace = (char)(b+48) + a_D.QuickestR(a_map,a,b,c);
+	if (trace.empty()){
+		cout<<"Journey not possible\n";
+		return 0;
+	}
 	a_map.displayTrace(trace,a);
 	return 0;
 }

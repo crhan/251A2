@@ -54,10 +54,8 @@ string dijkstra::earlyAT(map & a_map, string startTi, int depTo, int desTo)
 
 
 
-dijkstra::dijkstra(map &a_map)
+dijkstra::dijkstra()
 {
-	int a = a_map.getTown()->size();
-	vector<string> traceBack(a);
 }
 
 string dijkstra::QuickestR(map & a_map, string startTi, int depTo, int desTo) {
