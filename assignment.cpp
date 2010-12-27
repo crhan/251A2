@@ -18,6 +18,7 @@ int select();
 int pDirectBus(map &a_map);
 int pNextDB(map &a_map);
 int PEAT(map &a_map, dijkstra & a_D);
+int PQR(map &a_map, dijkstra &a_D);
 string cinTime();
 
 int main(){
@@ -34,9 +35,9 @@ int main(){
 		case 2: pDirectBus(aMap); break;
 		case 3: pNextDB(aMap); break;
 		case 4: PEAT(aMap, aD);break;
-		case 5:
+		case 5: PQR(aMap,aD); break;
 		case 0: return 0;
-		default: cout<<"Not implementen\n";
+		default: cout<<"Not implemention\n";
 		}
 		cout<<"\nPlease choose an option (Enter 1 for menu):\n";
 	}
@@ -165,5 +166,25 @@ int PEAT(map &a_map, dijkstra &a_D){
 
 	cout<<a_D.earlyAT(a_map,a,b,c)<<endl;
 
+	return 0;
+}
+
+int PQR(map &a_map, dijkstra &a_D){
+	string a;
+	int b,c;
+	vector<bus>::difference_type townSize;
+	townSize = a_map.getTown()->size()-1;
+
+	cout<<"Please enter the start time:\n";
+	a = cinTime();
+	cout<<"Please enter the departure town number (0.."
+			<<townSize<<"):\n";
+	b = select();
+	cout<<"Please enter the destination town number (0.."
+			<<townSize<<"):\n";
+	c = select();
+
+	string trace = (char)(b+48) + a_D.QuickestR(a_map,a,b,c);
+	a_map.displayTrace(trace,a);
 	return 0;
 }

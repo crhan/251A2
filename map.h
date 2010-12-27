@@ -11,6 +11,7 @@
 #include<string>
 #include<vector>
 #include<iostream>
+#include<iomanip>
 #include"town.h"
 using namespace std;
 
@@ -24,6 +25,7 @@ public:
 
 	vector<town>::iterator getTown(vector<town>::difference_type index){return aTown.begin()+index;}
 	vector<town> *getTown();
+	int displayTrace(string trace, string startT);
 	int newTown(string townName);
 private:
 	vector<town> aTown;
