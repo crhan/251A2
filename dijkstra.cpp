@@ -101,7 +101,7 @@ string dijkstra::QuickestR(map & a_map, string startTi, int depTo, int desTo) {
 	if (arrTi[desTo] != "9999") {
 		return traceBack[desTo];
 	} else {
-		return "Journey not possible";
+		return "";
 	}
 }
 

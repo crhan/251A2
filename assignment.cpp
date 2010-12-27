@@ -184,11 +184,14 @@ int PQR(map &a_map, dijkstra &a_D){
 			<<townSize<<"):\n";
 	c = select();
 
-	string trace = (char)(b+48) + a_D.QuickestR(a_map,a,b,c);
-	if (trace.empty()){
+	string tmpTrace = a_D.QuickestR(a_map,a,b,c);
+	string trace = (char)(b+48) + tmpTrace;
+	if (tmpTrace.empty()){
 		cout<<"Journey not possible\n";
-		return 0;
+		return 1;
 	}
+
+	cout<<trace<<endl;
 	a_map.displayTrace(trace,a);
 	return 0;
 }
