@@ -14,18 +14,26 @@
 using namespace std;
 
 
-class town {
+class town
+{
 private:
-	string name;
-	vector<bus> aBus;
+  string name;
+  vector < bus > aBus;
 
 public:
-	town(string a);
-	vector<bus>::iterator getBus(int desTown, string time);
-	vector<bus> *getBus(){ vector<bus> *ptr_bus=&aBus; return ptr_bus;}
-	int addBus(int a, string b, string c);
+  town (string a);
+  vector < bus >::iterator getBus (int desTown, string time);
+    vector < bus > *getBus ()
+  {
+    vector < bus > *ptr_bus = &aBus;
+    return ptr_bus;
+  }
+  int addBus (int a, string b, string c);
 
-	string getName(){return name;}
+  string getName ()
+  {
+    return name;
+  }
 };
 
 #endif /* TOWN_H_ */

@@ -7,30 +7,30 @@
 
 #include "town.h"
 
-town::town(string a):name(a),aBus(){}
+town::town (string a):name (a), aBus ()
+{
+}
 
 //vector<bus>::iterator town::getBus(vector<bus>::difference_type index)
 //{
-//	return aBus.begin()+index;
+//      return aBus.begin()+index;
 //}
 
-vector<bus>::iterator town::getBus(int desTown, string time)
+vector < bus >::iterator town::getBus (int desTown, string time)
 {
-	for (vector<bus>::iterator i=aBus.begin();
-			i != aBus.end(); ++i){
-		if (i->getDesTown() == desTown && i->getDepTime() > time)
-			return i;
-	}
-	return aBus.end();
+  for (vector < bus >::iterator i = aBus.begin (); i != aBus.end (); ++i)
+    {
+      if (i->getDesTown () == desTown && i->getDepTime () > time)
+	return i;
+    }
+  return aBus.end ();
 }
 
-int town::addBus(int a, string b, string c)
+int
+town::addBus (int a, string b, string c)
 {
-	bus tmp(a,b,c);
-	aBus.push_back(tmp);
+  bus tmp (a, b, c);
+  aBus.push_back (tmp);
 
-	return 0;
+  return 0;
 }
-
-
-
