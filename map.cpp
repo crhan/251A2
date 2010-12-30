@@ -49,13 +49,13 @@ int map::displayTrace(string trace, string startT) {
 	string tmp;
 	for (string::size_type i = 0; i < trace.size() - 1; ++i) {
 		int a = (int) trace[i] - 48, b = (int) trace[i + 1] - 48;
-		cout << setw(12) <<left<< aTown[a].getName();
-		cout << setw(12) <<left<< aTown[b].getName();
-		cout << setw(6) << (aTown[a].getBus(b,startT)->getDepTime());
-		cout << setw(6) << (aTown[a].getBus(b,startT)->getDesTime());
+		cout << setw(12) << left << aTown[a].getName();
+		cout << setw(12) << left << aTown[b].getName();
+		cout << setw(6) << (aTown[a].getBus(b, startT)->getDepTime());
+		cout << setw(6) << (aTown[a].getBus(b, startT)->getDesTime());
 		cout << endl;
 		//reset the startT
-		startT = aTown[a].getBus(b,startT)->getDesTime();
+		startT = aTown[a].getBus(b, startT)->getDesTime();
 	}
 	return 0;
 }
