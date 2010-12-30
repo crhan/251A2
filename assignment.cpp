@@ -160,6 +160,7 @@ string cinTime() {
 }
 
 int PEAT(map &a_map, dijkstra &a_D) {
+	//TODO 修改
 	string a;
 	int b, c;
 	vector<bus>::difference_type townSize;
@@ -173,12 +174,22 @@ int PEAT(map &a_map, dijkstra &a_D) {
 			<< "):\n";
 	c = select();
 
+	vector<int> traceBack(a_D.calc(a_map,a,b));
+
+	if (traceBack[c]==9999){
+		cout<<"Journey not possible";
+	}
+	else{
+		cout<<
+	}
+
 	cout << a_D.earlyAT(a_map, a, b, c) << endl;
 
 	return 0;
 }
 
 int PQR(map &a_map, dijkstra &a_D) {
+	//TODO 修改
 	string a;
 	int b, c;
 	vector<bus>::difference_type townSize;

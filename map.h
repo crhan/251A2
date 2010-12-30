@@ -27,7 +27,10 @@ public:
 		return aTown.begin() + index;
 	}
 	vector<town> *getTown();
-	int displayTrace(string trace, string startT);
+	int displayTrace(string trace, string startT);//TODO 修改成为接受两个int，一个表示开始，一个表示结束，还有一个string表示开始时间
+
+	vector<bus>::iterator *traceBus(int a, int b, string stratT);
+
 	int newTown(string townName);
 private:
 	vector<town> aTown;

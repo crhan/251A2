@@ -60,6 +60,11 @@ int map::displayTrace(string trace, string startT) {
 	return 0;
 }
 
+vector<bus>::iterator *map::traceBus(int a, int b, string stratT)
+{
+	//TODO 追踪从a出发的找到时间晚于startT的通往b处的bus，返回指针？ 需要指针吗？
+}
+
 int map::newTown(string townName) {
 	town bTown(townName);
 	aTown.push_back(bTown);
