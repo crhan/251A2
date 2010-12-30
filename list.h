@@ -8,11 +8,10 @@
 #ifndef LIST_H_
 #define LIST_H_
 
-class list
-{
+class list {
 public:
-  list ();
-  virtual ~ list ();
+	list();
+	virtual ~list();
 };
 
 #endif /* LIST_H_ */

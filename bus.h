@@ -12,46 +12,44 @@
 #include<iostream>
 using namespace std;
 
-class bus
-{
+class bus {
 private:
-  int desTown;
-  string depTime;
-  string desTime;
+	int desTown;
+	string depTime;
+	string desTime;
 public:
-    bus (int a, string b, string c)
-  {
-    desTown = a;
-    depTime = b;
-    desTime = c;
-  }
+	bus(int a, string b, string c){
+		desTown = a;
+		depTime = b;
+		desTime = c;
+	}
 
-  int printBus ();
+	int printBus();
 
-  string getDepTime () const
-  {
-    return depTime;
-  }
-  string getDesTime () const
-  {
-    return desTime;
-  }
-  int getDesTown () const
-  {
-    return desTown;
-  }
-  void setDepTime (string depTime)
-  {
-    this->depTime = depTime;
-  }
-  void setDesTime (string desTime)
-  {
-    this->desTime = desTime;
-  }
-  void setDesTown (int desTown)
-  {
-    this->desTown = desTown;
-  }
+    string getDepTime() const
+    {
+        return depTime;
+    }
+    string getDesTime() const
+    {
+        return desTime;
+    }
+    int getDesTown() const
+    {
+        return desTown;
+    }
+    void setDepTime(string depTime)
+    {
+        this->depTime = depTime;
+    }
+    void setDesTime(string desTime)
+    {
+        this->desTime = desTime;
+    }
+    void setDesTown(int desTown)
+    {
+        this->desTown = desTown;
+    }
 
 };
 

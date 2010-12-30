@@ -13,12 +13,11 @@
 
 using namespace std;
 
-class dijkstra
-{
+class dijkstra {
 public:
-  dijkstra ();
-  string earlyAT (map & a_map, string startTi, int depTo, int desTo);
-  string QuickestR (map & a_map, string startTi, int depTo, int desTo);
+	dijkstra();
+	string earlyAT(map &a_map, string startTi, int depTo, int desTo);
+	string QuickestR(map &a_map, string startTi, int depTo, int desTo);
 
 private:
 };
