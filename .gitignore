@@ -1,4 +1,4 @@
-/Debug/251Assign2
+/251Assign2
 /Debug/assignment.d
 /Debug/assignment.o
 /Debug/bus.d
@@ -15,3 +15,5 @@
 /Debug/subdir.mk
 /Debug/town.d
 /Debug/town.o
+depends
+assign
